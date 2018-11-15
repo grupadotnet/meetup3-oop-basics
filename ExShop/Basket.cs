@@ -21,6 +21,7 @@ namespace ExShop
                 TotalPrice += item.price;
             }
 
+            //TODO:
             // tu wiecej scenariuszy, zadania dla grup
             if (availableCash >= TotalPrice)
             {

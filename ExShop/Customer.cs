@@ -1,10 +1,11 @@
-﻿using System.CodeDom;
-
-namespace ExShop
+﻿namespace ExShop
 {
     public class Customer
     {
-        //omowienie tworzenia obiektu
+        //TODO:
+        // weryfikacja uzytkownika
+        // tworzenie uzytkownika z konsoli
+        // omowienie tworzenia obiektu
         public Customer()
         {
             Id = 1;

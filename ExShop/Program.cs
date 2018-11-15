@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExShop
 {
@@ -12,10 +7,20 @@ namespace ExShop
         static void Main(string[] args)
         {
             //TODO: 
-            //petle
-            //tworzenie instancji
-            //wywolywanie metod
-            //logika calego programu
+            // petle
+            // tworzenie instancji
+            // tworzenie i wywolywanie metod
+            // logika calego programu
+            // troche cleancode'u i porzadkow
+            // troche resharpera?
+
+            //TODO:
+            // scenariusz dla klienta
+            // weryfikacja klienta
+            // wchodzi do wybranego sklepu, albo wychodzi z menu
+            // wybiera przedmioty
+            // wybiera czy chce kupic czy anulowac
+            // placi
 
             var arek = new Customer(2, "Arek", "Klis", "arek9513@gmail.com");
             var biedak = new Customer(3, "Pan", "Zul", "brak", 5.5);
