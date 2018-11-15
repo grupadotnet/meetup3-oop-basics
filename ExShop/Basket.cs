@@ -1,20 +1,39 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ExShop
 {
-    public class Basket
+    public static class Basket
     {
-        public Basket()
+        static Basket()
         {
             ItemsInBasket = 0;
             TotalPrice = 0;
+            SelectedItems = new List<Item>();
         }
 
-        public int ItemsInBasket { get; set; }
-        public Item[] SelectedItems { get; set; }
-        public double TotalPrice { get; set; }
+        public static int ItemsInBasket { get; set; }
+        public static List<Item> SelectedItems { get; set; }
+        public static double TotalPrice { get; set; }
 
-        public void Buy(double availableCash)
+
+        public static void AddItemToBasket(Item item)
+        {
+            Console.Clear();
+            SelectedItems.Add(item);
+            Console.WriteLine(item.name + " dodany do koszyka");
+        }
+
+        public static void ShowItemsInBasket()
+        {
+            Console.Clear();
+            foreach (var selectedItem in SelectedItems)
+            {
+                Console.WriteLine(selectedItem.name);
+            }
+        }
+
+        public static void Buy(double availableCash)
         {
             foreach (var item in SelectedItems)
             {
@@ -25,10 +44,12 @@ namespace ExShop
             // tu wiecej scenariuszy, zadania dla grup
             if (availableCash >= TotalPrice)
             {
+                Console.Clear();
                 Console.WriteLine("Wysylka w dordze");
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Nie stac cie biedaku");
             }
         }
